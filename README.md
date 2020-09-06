@@ -30,12 +30,19 @@ Screenshots
 사용기술 
 ---------------------
 
-MVVM(Modle+View+ViewModel)     
-DataBinding   
-ROOM   
-MediaPlayer   
-Retrofit   
-Java   
-YouTube API
+-MVVM(Modle+View+ViewModel)        
+
+-DataBinding      
+
+-ROOM      
+
+-MediaPlayer      
+
+-Retrofit      
+
+-Java      
+
+-YouTube API   
+
    
  
