@@ -29,6 +29,9 @@ Screenshots
 
 사용기술 
 ---------------------
+*single asterisks*
+*single asterisks*
+*single asterisks*
 MVVM(Modle+View+ViewModel)
 DataBinding
 ROOM
