@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.hjk.music_3.R;
 import com.hjk.music_3.data.local.model.BackGround;
 import com.hjk.music_3.data.remote.BackRepository;
 
@@ -24,6 +25,7 @@ public class BackViewModel extends ViewModel {
         back=backRepository.getBack();
 
     }
+
 
 
     public void setPos(int pos){

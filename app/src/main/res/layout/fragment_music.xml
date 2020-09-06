@@ -7,6 +7,10 @@
         <variable name="test"
             type="com.hjk.music_3.ui.viewmodel.UserViewModel"/>
 
+        <variable name="back"
+            type="com.hjk.music_3.ui.viewmodel.BackViewModel"/>
+
+
 
     </data>
 

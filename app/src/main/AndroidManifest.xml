@@ -131,12 +131,6 @@
             android:exported="true">
         </service>
 
-        <service
-            android:name=".Service.YouTubeService"
-            android:enabled="true"
-            android:exported="true">
-        </service>
-
         <receiver
             android:name=".Receiver.PlayerReceiver"
             tools:ignore="ExportedReceiver">

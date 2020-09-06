@@ -8,7 +8,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Bitmap;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -34,19 +33,12 @@ import com.andre_max.youtube_url_extractor.model.YTSubtitles;
 import com.andre_max.youtube_url_extractor.model.YoutubeMeta;
 import com.hjk.music_3.R;
 import com.hjk.music_3.Receiver.MusicReceiver;
-import com.hjk.music_3.Receiver.NotificationPlayer;
 import com.hjk.music_3.data.local.model.Music;
 import com.hjk.music_3.ui.activity.MusicActivity;
 import com.hjk.music_3.ui.viewmodel.MusicViewModel;
 import com.hjk.music_3.ui.viewmodel.UserViewModel;
-import com.hjk.music_3.utils.ImageUtils;
 import com.hjk.music_3.utils.SecondUtils;
-import com.hjk.music_3.utils.ToastUtils;
 import com.squareup.picasso.Picasso;
-
-import net.protyposis.android.mediaplayer.MediaSource;
-import net.protyposis.android.mediaplayer.dash.DashSource;
-import net.protyposis.android.mediaplayer.dash.SimpleRateBasedAdaptationLogic;
 
 import java.util.List;
 import java.util.Random;
@@ -67,7 +59,7 @@ public class MusicService extends LifecycleService  {
     IntentFilter intentFilter;
 
     MusicReceiver myNoisyAudioStreamReceiver;
-    private NotificationPlayer mNotificationPlayer;
+
     private PlayerCallHelper mPlayerCallHelper;
     private Boolean init=false;
 
@@ -111,7 +103,7 @@ public class MusicService extends LifecycleService  {
         intentFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
         myNoisyAudioStreamReceiver = new MusicReceiver();
 
-        mNotificationPlayer = new NotificationPlayer(this);
+
 
 
         if (mPlayerCallHelper == null) {
@@ -237,7 +229,6 @@ public class MusicService extends LifecycleService  {
         }
 
         try{
-            MediaSource dashSource = new DashSource(getApplicationContext(), url, new SimpleRateBasedAdaptationLogic());
 
             mediaPlayer.setDataSource(this,url);
             mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -362,31 +353,7 @@ public class MusicService extends LifecycleService  {
         return this.init;
     }
 
-    @Override
-    public  int onStartCommand(Intent intent, int flags, int startId) {
-        if (intent != null) {
-            String action = intent.getAction();
-            if (NotificationPlayer.CommandActions.TOGGLE_PLAY.equals(action)) {
-                if (musicViewModel.getIsPlaying().getValue()) {
-                    pause();
-                } else {
-                    start();
 
-                }
-            } else if (NotificationPlayer.CommandActions.REWIND.equals(action)) {
-                prev();
-            } else if (NotificationPlayer.CommandActions.FORWARD.equals(action)) {
-                next();
-            } else if (NotificationPlayer.CommandActions.CLOSE.equals(action)) {
-                pause();
-
-            }
-        }
-
-
-        return super.onStartCommand(intent, flags, startId);
-
-    }
 
 
 

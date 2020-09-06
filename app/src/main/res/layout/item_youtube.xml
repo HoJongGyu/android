@@ -43,9 +43,9 @@
                     android:layout_height="20dp"
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/_a"
+
                     android:gravity="center"
-                    android:text="30분"
+
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
@@ -79,7 +79,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/_a"
                     android:gravity="center"
-                    android:text="MUSIC"
+                    android:text="YOUTUBE"
                     android:textColor="#FFFFFF"
                     android:textSize="17sp" />
             </LinearLayout>

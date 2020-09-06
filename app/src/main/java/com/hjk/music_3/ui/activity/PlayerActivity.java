@@ -44,6 +44,13 @@ public class PlayerActivity extends AppCompatActivity {
         }
         //하단바 클릭시 재생중인 노래면 다시 재생x
 
+
+        if(!musicViewModel.getTimer()){
+            binding.time.setVisibility(View.GONE);
+            musicViewModel.setTimer(false);
+            binding.alarm.setImageResource(R.drawable.m_c);
+
+        }
     }
 
 
@@ -147,7 +154,7 @@ public class PlayerActivity extends AppCompatActivity {
 //                        }
 
                         binding.alarm.setImageResource(R.drawable.m_c_on);
-                        binding.time.setText(time);
+//                        binding.time.setText(time);
                     } else {
                         binding.time.setVisibility(View.GONE);
                         musicViewModel.setTimer(false);
@@ -202,6 +209,7 @@ public class PlayerActivity extends AppCompatActivity {
     public void set_loop(){
         if(musicViewModel.getLoop()==false) {
             binding.loop.setImageResource(R.drawable.icon_reverse_only_one);
+
             musicViewModel.setLoop(true);
             ToastUtils.set(getApplicationContext(),"반복재생 실행",2);
 

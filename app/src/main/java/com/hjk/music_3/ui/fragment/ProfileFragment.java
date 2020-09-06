@@ -48,8 +48,14 @@ public class ProfileFragment extends Fragment {
         startActivity(intent);
     }
 
-    public void Intent_Back(){
+    public void Intent_YouTube(){
         Intent intent=new Intent(getActivity(), YouTubeAddActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void Intent_Back(){
+        Intent intent=new Intent(getActivity(), BackGroundActivity.class);
         startActivity(intent);
     }
 

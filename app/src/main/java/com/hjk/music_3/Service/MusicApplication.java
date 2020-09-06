@@ -7,7 +7,7 @@ public class MusicApplication extends Application {
     private static MusicServiceImpl musicService;
 
     private static  MusicApplication youTubeApplication;
-    private static YouTubeServiceImpl youTubeService;
+
 
 
     @Override
@@ -18,7 +18,7 @@ public class MusicApplication extends Application {
         musicService=new MusicServiceImpl(getApplicationContext());
 
 
-        youTubeService=new YouTubeServiceImpl(getApplicationContext());
+
     }
 
     public static MusicApplication getInstance(){
@@ -26,9 +26,6 @@ public class MusicApplication extends Application {
     }
 
     public static MusicServiceImpl getServiceInterface() { return musicService; }
-
-    public static YouTubeServiceImpl y_getServiceInterface() { return youTubeService; }
-
 
 
 

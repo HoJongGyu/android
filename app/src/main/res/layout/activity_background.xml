@@ -59,7 +59,7 @@
                 android:id="@+id/layout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="290dp"
+                android:layout_marginTop="390dp"
                 android:layout_marginBottom="70dp"
                 android:orientation="horizontal">
 
@@ -81,7 +81,7 @@
 
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/back_list"
-                                android:layout_width="700dp"
+                                android:layout_width="750dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="20dp"
                                 android:layout_marginBottom="20dp" />

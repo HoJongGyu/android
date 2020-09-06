@@ -11,9 +11,6 @@ import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.hjk.music_3.Receiver.NotificationPlayer;
-import com.hjk.music_3.utils.ToastUtils;
-
 public class PlayerCallHelper implements AudioManager.OnAudioFocusChangeListener {
 
     private final PlayerCallHelperListener mPlayerCallHelperListener;
@@ -63,7 +60,7 @@ public class PlayerCallHelper implements AudioManager.OnAudioFocusChangeListener
     public void bindRemoteController(Context context) {
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 
-        ComponentName remoteComponentName = new ComponentName(context, NotificationPlayer.class.getName());
+        ComponentName remoteComponentName = new ComponentName(context, PlayerCallHelper.class.getName());
         try {
             if (remoteControlClient == null) {
                 mAudioManager.registerMediaButtonEventReceiver(remoteComponentName);
