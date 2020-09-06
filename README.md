@@ -63,27 +63,31 @@ Screenshots
 --------------------
 
 ### 1.Data
-###### local-Dao: Room의 쿼리 구현
-###### local-Model: 각 데이터를 저장 할 모델구현(User, Music, YouTube, BackGround- 추후 개발 예정)   
+##### local-Dao: Room의 쿼리 구현
+##### local-Model: 각 데이터를 저장 할 모델구현(User, Music, YouTube, BackGround- 추후 개발 예정)   
 
 ##### Remote-api: Retrofit으로 통신하기 위한 레트로핏 객체 생성 과정들과 메서드들
-##### Remote-Repository: Retrofit과 통신하여 데이터를 가져와 뷰모델에 데이터를 주기위한 과정
+##### Remote-Repository: Retrofit과 통신하여 데이터를 가져와 뷰모델에 데이터를 주기위한 과정   
+
 
 ### 2.Receiver   
 ##### MusicReceiver- 음악재생중 이어폰이나 헤드폰이 빠졌을 때 음악 멈춤을 위한 리시버
 ##### PlayerReceiver- NotificationPlayer구현을 위한 리시버
 
+
 ### 3.Service
 ##### MusicApplication, MusicService, MusicServiceImpl- 미디어 플레이어 백그라운드 재생을 위한 서비스 컴포넌트
 ##### PlayerCallHelper- 오디오 포커스를 위한 클래스
+
 
 ### 4.UI
 ##### Activity- 각 액티비티 구성, SplashActivity에서 시작하여 MusicActivity로 Intent하고 Fragment3가지를 탭 화면 구성으로 사용 하였다.   
 ##### adapter- 리사이클러뷰로 화면 구성을 위한 adapter   
 ##### fragment- 음악 목록, 유튜브 목록, 프로필, 음악추가에 대한 각 프래그먼트
 
+
 ### 5.ViewModel
-##### 각 모델에 대한 뷰모델이 있고 이 곳에 데이터를 저장하여 UI, 기능에 필요한 데이터를 뷰모델에서 불러와 사용 하였다.
+##### 각 모델에 대한 뷰모델이 있고 이 곳에 데이터를 저장하여 UI, 기능에 필요한 데이터를 뷰모델에서 불러와 사용 하였다.   
 
 
 ### 6.Utils
