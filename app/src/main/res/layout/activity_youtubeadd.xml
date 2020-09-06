@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <data>
+
+        <variable name="activity"
+            type="com.hjk.music_3.ui.activity.YouTubeAddActivity"/>
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/join"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/main_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/b33" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="485dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/exit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/list_selector_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <LinearLayout
+            android:id="@+id/underbar_n"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="398dp"
+            android:background="#C3673AB7"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_n"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_n"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout_n"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_n"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="400dp"
+            android:background="#23373232"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/name_q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="유튜브링크"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_n"
+            app:layout_constraintTop_toTopOf="@+id/linearlayout_n" />
+
+        <EditText
+            android:id="@+id/mp3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#00373232"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearlayout_n"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_n"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_n"
+            app:layout_constraintTop_toTopOf="@+id/linearlayout_n" />
+
+        <LinearLayout
+            android:id="@+id/underbar_e"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="323dp"
+            android:background="#C3673AB7"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/main_bg"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_Email"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_Email"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout_Email" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout_Email"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="325dp"
+            android:background="#23373232"
+            android:fadingEdge="vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_n"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_n"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout_n">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/email_q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="타이틀"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_Email"
+            app:layout_constraintTop_toTopOf="@+id/linearlayout_Email" />
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#00FFFFFF"
+            android:ems="10"
+
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/linearlayout_Email"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_Email"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_Email"
+            app:layout_constraintTop_toTopOf="@+id/linearlayout_Email" />
+
+        <LinearLayout
+            android:id="@+id/underbar_p"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="253dp"
+            android:background="#C3673AB7"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/main_bg"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_p"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_p"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout_p"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_p"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="255dp"
+            android:background="#23373232"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_Email"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_Email"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout_Email">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/password_q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="이미지링크"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_p"
+            app:layout_constraintTop_toTopOf="@+id/linearlayout_p" />
+
+        <EditText
+            android:id="@+id/image"
+            android:hint="입력하지 않을 시 기본 이미지로 설정 됩니다"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#00FFFFFF"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/linearlayout_p"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_p"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_p"
+            app:layout_constraintTop_toTopOf="@+id/linearlayout_p" />
+
+        <Button
+            android:id="@+id/join_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#3949AB"
+            android:text="영상추가"
+            android:textColor="#FFFFFF"
+            android:onClick="@{()->activity.youtube_insert()}"
+            app:layout_constraintEnd_toEndOf="@+id/linearlayout_p"
+            app:layout_constraintStart_toStartOf="@+id/linearlayout_p"
+            app:layout_constraintTop_toBottomOf="@+id/underbar_p" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout_login"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="148dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/main_bg"
+            app:layout_constraintEnd_toEndOf="@+id/login_button"
+            app:layout_constraintStart_toStartOf="@+id/login_button"
+            app:layout_constraintTop_toBottomOf="@+id/login_button"></LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout_terms"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="27dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/terms_button"
+            app:layout_constraintStart_toStartOf="@+id/terms_button"
+            app:layout_constraintTop_toBottomOf="@+id/terms_button"></LinearLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
