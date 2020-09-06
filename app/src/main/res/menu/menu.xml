@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">ㅋ
+    <item
+        android:id="@+id/action1"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="뮤직" />
+    <item
+        android:id="@+id/action2"
+        android:enabled="true"
+        android:icon="@drawable/music"
+        android:title="유튜브" />
+    <item
+        android:id="@+id/action3"
+        android:enabled="true"
+        android:icon="@drawable/moon"
+        android:title="설정" />
+</menu>

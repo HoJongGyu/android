@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="activity"
+            type="com.hjk.music_3.ui.activity.PlayerActivity"/>
+
+     <variable name="music"
+            type="com.hjk.music_3.ui.viewmodel.MusicViewModel"/>
+
+
+    </data>
+
+    <merge
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:post="@{music.current_music().image}"  />
+
+    <LinearLayout
+        android:id="@+id/mainUI"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/streamInfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-light"
+                android:text="@{music.current_music().title}"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/descText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleText"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-thin"
+                android:text="Better stay inside!"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/music_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="00:48"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/musicControls"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:onClick="@{()->activity.prev15()}"
+                android:id="@+id/prev15"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="100dp"
+                card_view:srcCompat="@drawable/icon_next_15sec" />
+
+            <ImageButton
+                android:onClick="@{()->activity.next15()}"
+                android:id="@+id/next15"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="220dp"
+                card_view:srcCompat="@drawable/icon_prev_15sec" />
+
+
+
+            <ImageButton
+                android:id="@+id/prevBtn"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="99dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_toStartOf="@+id/playPauseLayout"
+                android:layout_toLeftOf="@+id/playPauseLayout"
+                android:onClick="@{()->activity.prev()}"
+                android:padding="4dp"
+                android:src="@drawable/ic_skip_previous_48dp" />
+
+            <FrameLayout
+                android:layout_marginTop="60dp"
+                android:id="@+id/playPauseLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+
+                <ImageButton
+                    android:id="@+id/playBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:onClick="@{()->activity.start_pause()}"
+                    android:src="@drawable/ic_play_arrow_48dp"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+            <ImageButton
+                android:layout_marginTop="60dp"
+                android:id="@+id/nextBtn"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_toEndOf="@+id/playPauseLayout"
+                android:layout_toRightOf="@+id/playPauseLayout"
+                android:padding="4dp"
+                android:onClick="@{()->activity.next()}"
+                android:src="@drawable/ic_skip_next_48dp" />
+
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/SeekBar"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="48dp"
+            android:gravity="center"
+     />
+
+    </LinearLayout>
+
+
+
+</merge>
+</layout>
+

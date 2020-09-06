@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<ImageView
+    android:id="@+id/imageView6"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scaleType="centerCrop"
+    app:srcCompat="@drawable/luke_chesser_hqo6uyo4nbg_unsplash"
+    tools:ignore="MissingConstraints" />
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottomNavi"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@drawable/m_underbar"
+    app:backgroundTint="#B2191818"
+    app:itemIconTint="#FFFFFFFF"
+    app:itemTextColor="#FFFFFFFF"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:menu="@menu/menu"
+    tools:layout_editor_absoluteX="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
