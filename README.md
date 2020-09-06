@@ -73,25 +73,25 @@ Screenshots
 #### MusicReceiver- 음악재생중 이어폰이나 헤드폰이 빠졌을 때 음악 멈춤을 위한 리시버
 #### PlayerReceiver- NotificationPlayer구현을 위한 리시버
 
-#### 3.Service
-### MusicApplication, MusicService, MusicServiceImpl- 미디어 플레이어 백그라운드 재생을 위한 서비스 컴포넌트
-### PlayerCallHelper- 오디오 포커스를 위한 클래스
+### 3.Service
+#### MusicApplication, MusicService, MusicServiceImpl- 미디어 플레이어 백그라운드 재생을 위한 서비스 컴포넌트
+#### PlayerCallHelper- 오디오 포커스를 위한 클래스
 
-#### 4.UI
-### Activity- 각 액티비티 구성, SplashActivity에서 시작하여 MusicActivity로 Intent하고 Fragment3가지를 탭 화면 구성으로 사용 하였다.   
-### adapter- 리사이클러뷰로 화면 구성을 위한 adapter   
-### fragment- MusicFragment(음악의 목록과 재생에 대한 프래그먼트), YouTubeFragmet(유튜브 재생 프래그먼트), ProfileFragment(음악추가와 각 설정, 프로필, 로그아웃)
+### 4.UI
+#### Activity- 각 액티비티 구성, SplashActivity에서 시작하여 MusicActivity로 Intent하고 Fragment3가지를 탭 화면 구성으로 사용 하였다.   
+#### adapter- 리사이클러뷰로 화면 구성을 위한 adapter   
+#### fragment- MusicFragment(음악의 목록과 재생에 대한 프래그먼트), YouTubeFragmet(유튜브 재생 프래그먼트), ProfileFragment(음악추가와 각 설정, 프로필, 로그아웃)
 
-#### 5.ViewModel
-### 각 모델에 대한 뷰모델이 있고 이 곳에 데이터를 저장하여 UI, 기능에 필요한 데이터를 뷰모델에서 불러와 사용 하였다.
+### 5.ViewModel
+#### 각 모델에 대한 뷰모델이 있고 이 곳에 데이터를 저장하여 UI, 기능에 필요한 데이터를 뷰모델에서 불러와 사용 하였다.
 
 
-#### 6.Utils
-### ActivityUtils- 메인 액티비티에서 프래그먼트 변환을 위하여 사용한 유틸리티
-### Binding- 이미지에 대한 유틸리티
-### ItemOffDecoration- 리사이클러뷰 아이템에 사용한 카드뷰에 대한 간격을 주기 위한 유틸리티
-### SecondUtils- 음악시간에 대한 정보를 가져와 1000분의 1로 나누어주고 60초가 넘기면 1로 바꾸어주는 유틸리티
-### ToastUtils- Toast에 대한 메서드 사용의 코드 길이를 조금이라도 줄이기 위해 사용한 유틸리티
+### 6.Utils
+#### ActivityUtils- 메인 액티비티에서 프래그먼트 변환을 위하여 사용한 유틸리티
+#### Binding- 이미지에 대한 유틸리티
+#### ItemOffDecoration- 리사이클러뷰 아이템에 사용한 카드뷰에 대한 간격을 주기 위한 유틸리티
+#### SecondUtils- 음악시간에 대한 정보를 가져와 1000분의 1로 나누어주고 60초가 넘기면 1로 바꾸어주는 유틸리티
+#### ToastUtils- Toast에 대한 메서드 사용의 코드 길이를 조금이라도 줄이기 위해 사용한 유틸리티
 
 
  
