@@ -25,3 +25,16 @@ Screenshots
 </div>
 
 --------------------
+
+
+사용기술 
+---------------------
+MVVM(Modle+View+ViewModel)
+DataBinding
+ROOM
+MediaPlayer
+Retrofit
+Java
+YouTube API
+
+ 
