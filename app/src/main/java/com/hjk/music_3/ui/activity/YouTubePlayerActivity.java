@@ -53,7 +53,7 @@ public class YouTubePlayerActivity extends YouTubeBaseActivity implements YouTub
 
         if (!wasRestored) {
             player.cueVideo(youtube_url == null ? "2jQJTppSCck" : youtube_url.substring(youtube_url.indexOf("v=") + 2));
-            MusicApplication.getInstance().y_getServiceInterface().setPlayer(player);
+
 
 
         }
@@ -138,7 +138,7 @@ public class YouTubePlayerActivity extends YouTubeBaseActivity implements YouTub
 
         @Override
         public void onLoaded(String s) {
-            MusicApplication.getInstance().y_getServiceInterface().play();
+
             // Called when a video is done loading.
             // Playback methods such as play(), pause() or seekToMillis(int) may be called after this callback.
         }
