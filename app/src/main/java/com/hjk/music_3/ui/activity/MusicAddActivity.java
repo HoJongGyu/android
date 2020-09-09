@@ -1,5 +1,6 @@
 package com.hjk.music_3.ui.activity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -167,29 +168,8 @@ public class MusicAddActivity extends AppCompatActivity {
 
         String objJson = gson.toJson(youtube);
 
-
-        youtubeService = RetrofitService.getRetro().create(YouTubeService.class);
-        Call<ResponseBody> youtube = youtubeService.youtube_insert(objJson);
-        Toast.makeText(getApplicationContext(), "유튜브 음악 추가 완료", Toast.LENGTH_SHORT).show();
-        youtube.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                try {
-                    String result = response.body().string();
-                    System.out.println(result);
-                    if (result.equals("1")) {
-                        Toast.makeText(getApplicationContext(), "유튜브 추가 완료", Toast.LENGTH_SHORT).show();
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "유튜브 추가 실패", Toast.LENGTH_SHORT).show();
-
-            }
-        });
+        Intent intent=new Intent(this,MusicActivity.class);
+        startActivity(intent);
+        ToastUtils.set(getApplicationContext(),"유튜브 뮤직 추가 완료",2);
     }
 }
