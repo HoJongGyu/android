@@ -66,8 +66,12 @@ public class LoginActivity extends AppCompatActivity {
                     intent = new Intent(LoginActivity.this, MusicActivity.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(this, "아이디 또는 비밀번호가 틀립니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "비밀번호가 틀립니다.", Toast.LENGTH_SHORT).show();
                 }
+            }
+            else{
+                Toast.makeText(this, "아이디가 틀립니다.", Toast.LENGTH_SHORT).show();
+
             }
         });
     }
