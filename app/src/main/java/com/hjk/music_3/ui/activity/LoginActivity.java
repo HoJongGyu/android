@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     Intent intent = getIntent();
 
     int save;
-
+    int l;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
