@@ -32,7 +32,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
             default:
                 return null;
         }
-        //return null;
+
     }
 
     @Override

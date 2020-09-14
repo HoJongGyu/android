@@ -18,6 +18,7 @@ import com.hjk.music_3.data.remote.api.UserService;
 import com.hjk.music_3.databinding.ActivitySignBinding;
 import com.hjk.music_3.ui.viewmodel.UserViewModel;
 import com.hjk.music_3.utils.ToastUtils;
+import com.hjk.music_3.utils.Validation;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -38,6 +39,11 @@ public class RegisterActivity extends AppCompatActivity {
         binding.setActivity(this);
     }
 
+    public void Intent_login(){
+        Intent intent=new Intent(this,LoginActivity.class);
+        startActivity(intent);
+    }
+
     public void sign(){
         if(binding.id.getText().length()==0){
             ToastUtils.set(getApplicationContext(),"아이디를 입력해 주세요",2);
@@ -55,6 +61,8 @@ public class RegisterActivity extends AppCompatActivity {
             ToastUtils.set(getApplicationContext(),"이름을 입력해 주세요",2);
             return;
         }
+
+
 
 
 
@@ -86,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                     else{
-                            System.out.println("같지 않음");
+
                     }
                 }catch(Exception e){
                     e.printStackTrace();

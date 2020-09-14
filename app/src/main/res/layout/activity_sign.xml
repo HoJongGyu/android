@@ -223,12 +223,13 @@
         app:layout_constraintTop_toTopOf="@+id/linearlayout_p" />
 
     <Button
+
         android:id="@+id/join_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#C3673AB7"
-        android:text="NOW에 회원가입하기"
+        android:text="회원가입하기"
         android:textColor="#FFFFFF"
         android:onClick="@{()->activity.sign()}"
         app:layout_constraintEnd_toEndOf="@+id/linearlayout_p"
@@ -236,6 +237,7 @@
         app:layout_constraintTop_toBottomOf="@+id/underbar_p" />
 
     <LinearLayout
+        android:onClick="@{()->activity.Intent_login()}"
         android:id="@+id/linearlayout_login"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -252,6 +254,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login_button"></LinearLayout>
 
     <TextView
+        android:onClick="@{()->activity.Intent_login()}"
         android:id="@+id/login_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -265,6 +268,7 @@
         app:layout_constraintTop_toBottomOf="@+id/join_button" />
 
     <Button
+        android:onClick="@{()->activity.Intent_login()}"
         android:id="@+id/sign"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
