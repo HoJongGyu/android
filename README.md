@@ -41,7 +41,10 @@ Screenshots
 </div>
 
 --------------------
+다운로드
+<a href="http://these9909.cafe24.com/filedownload"> apk 다운로드 </a>
 
+--------------------
 
 사용기술 
 ---------------------
